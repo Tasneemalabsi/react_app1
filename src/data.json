@@ -1,0 +1,44 @@
+[{
+    "image_url": "https://m.media-amazon.com/images/I/51iJx7YWDOL._AC_UF894,1000_QL80_.jpg",
+    "title": "iPhone 14",
+    "description": "The iPhone 14 adds one additional core to the GPU (five cores) processor, utilizes e-SIM technology, sports slightly better battery life, and has Apple's new safety features like satellite connectivity for emergency communications and crash detection.",
+    "category": "Electronics",
+    "price": 1400
+  },
+  {
+    "image_url": "https://m.media-amazon.com/images/I/6172+HY8EML.jpg",
+    "title": "7 inch Dog Frisbee",
+    "description": "Take your furry friend to the park and play the day away with this 7 inch Dog Safe Flyer!",
+    "category": "accessories",
+    "price": 1.5
+  },
+      {
+    "image_url": "https://static.thcdn.com/images/xsmall/original//productimg/original/12795023-3284851799803111.jpg",
+    "title": "Android Matrix Tee White",
+    "description": "The unique design and soft tri-blend material make for a perfect combination for this Android Matrix Tee. Unisex sizing",
+    "category": "clothes",
+    "price": 18
+  },
+  {
+    "image_url": "https://penvibe.com/wp-content/uploads/2015/07/Google-Maze-Pen.jpg",
+    "title": "Google Light Pen Blue",
+    "description": "Get yourself a great multitasking tool! Write a note, sign a tablet, and light up with this Google Light Pen!",
+    "category": "office",
+    "price": 2
+  },
+  {
+    "image_url": "https://www.alphamega.com.cy/Admin/Public/GetImage.ashx?Width=800&Height=800&Crop=5&DoNotUpscale=True&FillCanvas=True&Image=/Files/Images/Ecom/Products/858358.jpg&AlternativeImage=/Images/missing_image.jpg",
+    "title": "Thermal Bottle White",
+    "description": "Insulated to keep contents hot or cold for hours, this Google bottle is a great year-round companion. 17 oz.",
+    "category": "drinkware",
+    "price": 12
+  },
+
+{
+    "image_url": "https://cdn11.bigcommerce.com/s-n8duk1dboc/images/stencil/1280x1280/products/1670/13588/26583-A460-CRY__65012.1665515048.png?c=2",
+    "title": "Fold-over Beanie Grey",
+    "description": "Keep you ears warm while enjoying a cold winter day with this Google Fold-over Beanie.",
+    "category": "clothes" ,
+    "price": 15
+}
+]
