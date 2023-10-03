@@ -70,11 +70,11 @@ useEffect(function (){
               />
             <Button variant="outline-success" type='submit'>Search</Button>
           </Form>
-        <div className="container">
+        <div className="cardcontainer">
         {items.length !==0 ? items.map(function(item){
             return(
               <>
-                <CardComp image={item.images[0].baseUrl} title={item.name} price={item.price.value}/>
+                <CardComp image={item.images[0].baseUrl} title={item.name} price={item.price.value} showFavorites={true}/>
                 </>
             )
         }

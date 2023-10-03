@@ -60,11 +60,11 @@ let prices = [10,20,30,40,50,60,70,80,90,100]
         return <option value={price}>{price-10}$ - {price}$</option>
     })}
     </Form.Select>
-    <div className="container">
+    <div className="cardcontainer">
     {items.length !== 0 ?items.map(function(item){
             return(
               <>
-                <CardComp image={item.images[0].baseUrl} title={item.name} price={item.price.value}/>
+                <CardComp image={item.images[0].baseUrl} title={item.name} price={item.price.value} showFavorites={true}/>
                 </>
             )
         }):<h3>No results</h3>}
