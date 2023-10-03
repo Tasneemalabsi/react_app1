@@ -12,6 +12,7 @@ function Favorites (){
 
         favorites.splice(index, 1)
         let favoritesCopy = [...favorites]
+        
         setFavoritesState(favoritesCopy)
         let storedData = JSON.stringify(favoritesCopy)
         localStorage.setItem("favorites", storedData)
