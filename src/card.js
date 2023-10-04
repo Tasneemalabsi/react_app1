@@ -2,23 +2,21 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function CardComp (props) {
   let [show, setShow] = useState(false);
-
+  let {user} = useAuth0()
   function handleShow(){
     setShow(!show)
   }
-
-  // props = {title: item.title, image: item.image_url}
-
   function saveToLocalStorage (){
 
     if(localStorage.getItem("favorites")){
 
     let stringData = localStorage.getItem("favorites")
     let arr = JSON.parse(stringData);
-    arr.push(props) 
+    arr.push({...props, email:user.email}) 
 
     // -----------------------------
 
@@ -29,7 +27,7 @@ function CardComp (props) {
     else {
 
       let arr = [];
-      arr.push(props)
+      arr.push({...props, email:user.email})
       let stringedData = JSON.stringify(arr)
   
       localStorage.setItem("favorites", stringedData)

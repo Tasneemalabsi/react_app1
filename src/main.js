@@ -13,7 +13,7 @@ function Main (){
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '0f2abd4395msh6ce1c28ccac1aacp178ddbjsn9cd63c10ba80',
+        'X-RapidAPI-Key': '830cb32404msh080a8e7962b8035p140cd4jsned40d02d718a',
         'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com'
       }
     };
@@ -39,6 +39,10 @@ useEffect(function (){
 
 }, [])
 
+let username = "tasneem"
+console.log("welcome "+ username)
+console.log(`welcome ${username}`)
+
     async function handleSubmit (event){
         event.preventDefault()
         let searchedValue = event.target.search.value
@@ -46,7 +50,7 @@ useEffect(function (){
         const options = {
           method: 'GET',
           headers: {
-            'X-RapidAPI-Key': '0f2abd4395msh6ce1c28ccac1aacp178ddbjsn9cd63c10ba80',
+            'X-RapidAPI-Key': `${process.env.APIKEY}`,
             'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com'
           }
         };
