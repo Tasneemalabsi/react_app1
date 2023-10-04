@@ -13,7 +13,7 @@ function Main (){
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '830cb32404msh080a8e7962b8035p140cd4jsned40d02d718a',
+        'X-RapidAPI-Key': `${process.env.REACT_APP_APIKEY}`,
         'X-RapidAPI-Host': 'apidojo-hm-hennes-mauritz-v1.p.rapidapi.com'
       }
     };
@@ -78,7 +78,7 @@ console.log(`welcome ${username}`)
         {items.length !==0 ? items.map(function(item){
             return(
               <>
-                <CardComp image={item.images[0].baseUrl} title={item.name} price={item.price.value} showFavorites={true}/>
+                <CardComp image={item.images[0].baseUrl} title={item.name} price={item.price.value} showFavorites={true} showDelete={false}/>
                 </>
             )
         }

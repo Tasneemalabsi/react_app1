@@ -6,7 +6,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 function CardComp (props) {
   let [show, setShow] = useState(false);
-  let {user} = useAuth0()
+  let {user, isAuthenticated} = useAuth0()
   function handleShow(){
     setShow(!show)
   }
@@ -45,11 +45,11 @@ function CardComp (props) {
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Button variant="primary" onClick={handleShow}>Show Details</Button>
-          {props.showFavorites? <Button onClick={saveToLocalStorage}>Add to Favorites</Button>
+          {isAuthenticated && props.showFavorites? <Button onClick={saveToLocalStorage}>Add to Favorites</Button>
           : <Button onClick={saveToLocalStorage} style={{display:"none"}}>Add to Favorites</Button>
           
           }
-          <Button onClick={props.handleDelete}>Delete</Button>
+          {props.showDelete?<Button onClick={props.handleDelete}>Delete</Button>:<Button onClick={props.handleDelete} style={{display:"none"}}>Delete</Button>}
         </Card.Body>
       </Card>
       <Modal show={show} onHide={handleShow}>

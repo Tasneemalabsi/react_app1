@@ -5,9 +5,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 function Profile() {
 
   let {isAuthenticated, user} = useAuth0()
+  console.log(user)
   let stringedFavorites = localStorage.getItem("favorites");
   let favorites = JSON.parse(stringedFavorites);
-  let [favoritesState, setFavoritesState] = useState([]);
+  let [favoritesState, setFavoritesState] = useState(favorites);
 
   function handleDelete(index) {
     favorites.splice(index, 1);
@@ -20,10 +21,8 @@ function Profile() {
   function filterByEmail (){
     console.log(isAuthenticated)
     if (isAuthenticated){
-      console.log(1)
       let filteredData = favorites.filter(function(item){
-        console.log(item.email)
-        return user.email === item.email})
+      return user.email === item.email})
       setFavoritesState(filteredData)
     }
   }
@@ -46,6 +45,7 @@ function Profile() {
                   handleDelete={() => handleDelete(index)}
                   key={index}
                   email= {user.email}
+                  showDelete={true}
                 />
               );
             })
